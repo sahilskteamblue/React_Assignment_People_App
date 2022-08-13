@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,160 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+.anticon {
+  font-size: 18px;
+  cursor: pointer;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner>div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0)
+  }
+
+  40% {
+    -webkit-transform: scale(1.0)
+  }
+}
+
+@keyframes sk-bouncedelay {
+
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
+
+ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  border-top: 1px solid #e8e8e8;
+
+}
+
+li {
+  display: block;
+  flex: 0 1 auto;
+  list-style-type: none;
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #e8e8e8;
+}
+
+li:last-of-type {
+  border-right: none;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px 10px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 33%;
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+/* Responsive columns */
+@media screen and (max-width: 760px) {
+  .column {
+    width: 100%;
+    display: block;
+
+  }
+}
+
+/* Style the counter cards */
+.card {
+  background-color: #f5f5f5;
+  border: 1px solid #e8e8e8;
+  margin: 15px 0 5px 15px
+}
+
+.card-body {
+  padding: 5% 7%;
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 1;
+  padding: 20px;
+}
+
+.card-header {
+  margin: 0 auto;
+  width: max-content;
+}
+
+.card-image {
+  position: relative;
+  bottom: 0;
+
+}
+
+.card-actions {
+  color: rgba(0, 0, 0, .45);
+  background-color: #fafafa;
+  zoom: 1;
 }

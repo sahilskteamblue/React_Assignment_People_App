@@ -1,8 +1,8 @@
+import HomeScreen from "./Pages/HomeScreen";
+import "./index.css";
+
 const App = () => {
-  return (
-    <h1>Hello</h1>
-    
-  );
-}
+  return <HomeScreen />;
+};
 
 export default App;
