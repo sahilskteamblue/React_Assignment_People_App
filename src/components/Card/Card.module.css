@@ -1,0 +1,95 @@
+ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    border-top: 1px solid #e8e8e8;
+
+}
+
+li {
+    display: block;
+    flex: 0 1 auto;
+    list-style-type: none;
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #e8e8e8;
+}
+
+li:last-of-type {
+    border-right: none;
+}
+
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px 10px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 33%;
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+/* Responsive columns */
+@media screen and (max-width: 760px) {
+    .column {
+        width: 100%;
+        display: block;
+
+    }
+}
+
+/* Style the counter cards */
+.card {
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    margin: 15px 0 5px 15px
+}
+
+.card-body {
+    padding: 5% 7%;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    padding: 20px;
+}
+
+.card-header {
+    margin: 0 auto;
+    width: max-content;
+    display: flex;
+}
+
+.invisible-btn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+}
+
+.card-actions {
+    color: rgba(0, 0, 0, .45);
+    background-color: #fafafa;
+    zoom: 1;
+}

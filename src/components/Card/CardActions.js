@@ -6,6 +6,8 @@ import {
   DeleteFilled,
 } from "@ant-design/icons";
 
+import classes from "./Card.module.css";
+
 const CardActions = (props) => {
   const heartColorStyle = {
     color: "#FF0000",
@@ -35,7 +37,10 @@ const CardActions = (props) => {
     <>
       <ul>
         <li>
-          <button className="invisible-btn" onClick={changeHeartHandler}>
+          <button
+            className={classes["invisible-btn"]}
+            onClick={changeHeartHandler}
+          >
             {isHeartClicked ? (
               <HeartFilled style={heartColorStyle} />
             ) : (
@@ -43,14 +48,21 @@ const CardActions = (props) => {
             )}
           </button>
         </li>
-        <li className="anticon-hover-blue ">
-          <button className="invisible-btn" onClick={onEditClickHandler}>
+        <li>
+          <button
+            className={`${classes["invisible-btn"]} anticon-hover-blue`}
+            onClick={onEditClickHandler}
+          >
             <EditOutlined />
           </button>
         </li>
 
-        <li className="anticon-hover-blue " id={props.id}>
-          <button className="invisible-btn" onClick={onDeleteClickHandler}>
+        <li>
+          <button
+            id={props.id}
+            className={`${classes["invisible-btn"]} anticon-hover-blue`}
+            onClick={onDeleteClickHandler}
+          >
             <DeleteFilled />
           </button>
         </li>

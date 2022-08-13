@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { CloseOutlined } from "@ant-design/icons";
 import RequiredStar from "./RequiredStar";
+import classes from "./FormModal.module.css";
 
 const FormModal = (props) => {
   const [name, setName] = useState(props.name);
@@ -19,26 +20,31 @@ const FormModal = (props) => {
 
   return (
     <>
-      <div id="formModal" className="modal-backdrop">
-        <div className="modal-form">
-          <div className="container">
-            <div className="modal-header">
-              <span className="modal-title">Basic Modal</span>
-              <span className="close" onClick={onCancelHandler}>
+      <div className={classes["modal-backdrop"]}>
+        <div
+          className={classes["modal-form"]}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <div className={classes.container}>
+            <div className={classes["modal-header"]}>
+              <span className={classes["modal-title"]}>Basic Modal</span>
+              <span className={classes.close} onClick={onCancelHandler}>
                 <CloseOutlined />
               </span>
             </div>
             <hr />
             <form onSubmit={submitHandler}>
-              <div className="modal-content">
-                <div className="row">
-                  <div className="col-25">
+              <div className={classes["modal-content"]}>
+                <div className={classes.row}>
+                  <div className={classes["col-25"]}>
                     <label htmlFor="name">
                       <RequiredStar />
                       Name:
                     </label>
                   </div>
-                  <div className="col-75">
+                  <div className={classes["col-75"]}>
                     <input
                       type="text"
                       id="name"
@@ -47,14 +53,14 @@ const FormModal = (props) => {
                     />
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-25">
+                <div className={classes.row}>
+                  <div className={classes["col-25"]}>
                     <label htmlFor="email">
                       <RequiredStar />
                       Email:
                     </label>
                   </div>
-                  <div className="col-75">
+                  <div className={classes["col-75"]}>
                     <input
                       type="text"
                       id="email"
@@ -63,14 +69,14 @@ const FormModal = (props) => {
                     />
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-25">
+                <div className={classes.row}>
+                  <div className={classes["col-25"]}>
                     <label htmlFor="phone">
                       <RequiredStar />
                       Phone:
                     </label>
                   </div>
-                  <div className="col-75">
+                  <div className={classes["col-75"]}>
                     <input
                       type="text"
                       id="phone"
@@ -79,14 +85,14 @@ const FormModal = (props) => {
                     />
                   </div>
                 </div>
-                <div className="row">
-                  <div className="col-25">
+                <div className={classes.row}>
+                  <div className={classes["col-25"]}>
                     <label htmlFor="website">
                       <RequiredStar />
                       Website:
                     </label>
                   </div>
-                  <div className="col-75">
+                  <div className={classes["col-75"]}>
                     <input
                       type="text"
                       id="website"
@@ -97,14 +103,17 @@ const FormModal = (props) => {
                 </div>
               </div>
               <hr />
-              <div className="row">
-                <button type="submit" className="btn btn-primary btn-right">
+              <div className={classes.row}>
+                <button
+                  type="submit"
+                  className={`${classes.btn} ${classes["btn-primary"]} ${classes["btn-right"]}`}
+                >
                   <span>OK</span>
                 </button>
                 <button
                   type="button"
                   onClick={onCancelHandler}
-                  className="btn btn-right"
+                  className={`${classes.btn} ${classes["btn-right"]}`}
                 >
                   <span>Cancel</span>
                 </button>

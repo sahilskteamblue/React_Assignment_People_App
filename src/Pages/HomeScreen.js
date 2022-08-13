@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import PersonCard from "../components/Card/PersonCard";
 import { people } from "../data/people_data";
+import classes from "../components/Card/Card.module.css";
 
 const HomeScreen = () => {
   const [peopleData, setPeopleData] = useState(people);
 
   const dropPerson = (id) => {
-    console.log(id);
     setPeopleData(peopleData.filter((item) => item.id !== +id));
   };
 
   return (
     <>
-      <div className="row">
+      <div className={classes.row}>
         {peopleData.length === 0 ? (
           <>
             <div className="spinner">
@@ -24,7 +24,7 @@ const HomeScreen = () => {
           </>
         ) : (
           peopleData.map((person) => (
-            <div key={person.id} className="column">
+            <div key={person.id} className={classes.column}>
               <PersonCard person={person} dropPerson={dropPerson} />
             </div>
           ))

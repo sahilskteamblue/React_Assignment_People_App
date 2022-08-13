@@ -3,6 +3,7 @@ import CardIconText from "./CardIconText";
 import { MailOutlined, PhoneOutlined, GlobalOutlined } from "@ant-design/icons";
 import CardActions from "./CardActions";
 import FormModal from "../Form/FormModal";
+import classes from "./Card.module.css";
 
 const PersonCard = (props) => {
   const [name, setName] = useState(props.person.name);
@@ -51,24 +52,23 @@ const PersonCard = (props) => {
           onOkClicked={onOkClicked}
         />
       )}
-      <div className="card">
-        <div className="card-header">
+      <div className={classes.card}>
+        <div className={classes["card-header"]}>
           <img
             src={props.person.image}
             alt="Avatar"
             width="200px"
             height="200px"
-            className="card-image"
           ></img>
         </div>
-        <div className="card-body">
+        <div className={classes["card-body"]}>
           <h3>{name}</h3>
 
           <CardIconText icon={<MailOutlined />} text={email} />
           <CardIconText icon={<PhoneOutlined />} text={phone} />
           <CardIconText icon={<GlobalOutlined />} text={website} />
         </div>
-        <div className="card-actions">
+        <div className={classes["card-actions"]}>
           <CardActions
             id={props.person.id}
             onEditClicked={onEditClicked}
