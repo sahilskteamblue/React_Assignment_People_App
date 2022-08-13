@@ -17,6 +17,11 @@ body {
   cursor: pointer;
 }
 
+.anticon-hover-blue :hover {
+  color: #1890ff;
+  transition: 0.2s;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -153,11 +158,17 @@ li:last-of-type {
 .card-header {
   margin: 0 auto;
   width: max-content;
+  display: flex;
 }
 
-.card-image {
-  position: relative;
-  bottom: 0;
+.invisible-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 
 }
 
@@ -165,4 +176,147 @@ li:last-of-type {
   color: rgba(0, 0, 0, .45);
   background-color: #fafafa;
   zoom: 1;
+}
+
+
+/* Modal Styles */
+
+
+
+.modal-content {
+  padding: 0 5%
+}
+
+.modal-title {
+  margin: 0;
+  color: rgba(0, 0, 0, .85);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.modal-form {
+  background-color: #f5f5f5;
+  position: fixed;
+  top: 20vh;
+  width: 50%;
+  left: 25%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 760px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 760px) {
+
+  .col-25,
+  .col-75,
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .col-25 {
+    text-align: left;
+  }
+}
+
+.btn {
+
+  line-height: 1.499;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.645, .045, .355, 1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  height: 32px;
+  padding: 0 15px;
+  margin-left: 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, .65);
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1890ff;
+  border: #1890ff;
+}
+
+.btn,
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.btn-right {
+  float: right;
+}
+
+.close {
+  position: relative;
+  float: right;
 }
