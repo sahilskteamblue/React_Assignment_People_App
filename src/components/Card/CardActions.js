@@ -26,7 +26,8 @@ const CardActions = (props) => {
   };
 
   const onDeleteClickHandler = (e) => {
-    props.onDeleteClicked(e.currentTarget.id);
+    props.onDeleteClicked(true);
+    // props.onDeleteClicked(e.currentTarget.id);
   };
 
   const changeHeartHandler = () => {
@@ -59,7 +60,6 @@ const CardActions = (props) => {
 
         <li>
           <button
-            id={props.id}
             className={`${classes["invisible-btn"]} anticon-hover-blue`}
             onClick={onDeleteClickHandler}
           >

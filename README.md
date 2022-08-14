@@ -1,3 +1,23 @@
+# React Assignment 1
+
+## Create a react application which displays grid of people.
+
+Reference Link: https://react-advanced-assignment.psamd.vercel.app/
+
+### Requirements –
+
+- This is react application which displays grid of people along with their name, email, phone, website, and profile picture.
+
+- Decide the JSON structure of the entity (or entities) needed for the application and create test data in JSON file(s) in the project locally.
+
+- Application will read data from above local JSON file(s).
+
+- We need look and feel (all styles) of app developed to be exactly same as above reference app.
+
+- Use functional components to create this react application.
+
+<hr/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

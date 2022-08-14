@@ -48,6 +48,7 @@ const FormModal = (props) => {
                     <input
                       type="text"
                       id="name"
+                      title="Name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                     />
@@ -64,6 +65,7 @@ const FormModal = (props) => {
                     <input
                       type="text"
                       id="email"
+                      title="Email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -80,6 +82,7 @@ const FormModal = (props) => {
                     <input
                       type="text"
                       id="phone"
+                      title="Phone"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                     />
@@ -96,6 +99,7 @@ const FormModal = (props) => {
                     <input
                       type="text"
                       id="website"
+                      title="Website"
                       value={website}
                       onChange={(e) => setWebsite(e.target.value)}
                     />

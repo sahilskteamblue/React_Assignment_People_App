@@ -3,6 +3,7 @@ import CardIconText from "./CardIconText";
 import { MailOutlined, PhoneOutlined, GlobalOutlined } from "@ant-design/icons";
 import CardActions from "./CardActions";
 import FormModal from "../Form/FormModal";
+import DeleteModal from "../Form/DeleteModal";
 import classes from "./Card.module.css";
 
 const PersonCard = (props) => {
@@ -11,13 +12,20 @@ const PersonCard = (props) => {
   const [phone, setPhone] = useState(props.person.phone);
   const [website, setWebsite] = useState(props.person.website);
 
-  const [isEditClicked, setisEditClicked] = useState(false);
+  const [isEditClicked, setIsEditClicked] = useState(false);
+  const [isDeleteClicked, setIsDeleteClicked] = useState(false);
 
   const onEditClicked = (value) => {
-    setisEditClicked(value);
+    setIsEditClicked(value);
   };
 
-  const onDeleteClicked = (id) => {
+  const onDeleteClicked = (value) => {
+    setIsDeleteClicked(value);
+    // props.dropPerson(id);
+  };
+
+  const onConfirmDeleteClicked = (id) => {
+    setIsDeleteClicked(false);
     props.dropPerson(id);
   };
 
@@ -36,12 +44,19 @@ const PersonCard = (props) => {
     if (website !== newwebsite) {
       setWebsite(newwebsite);
     }
-    setisEditClicked(false);
+    setIsEditClicked(false);
   };
 
   useEffect(() => {}, [isEditClicked]);
   return (
     <>
+      {isDeleteClicked && (
+        <DeleteModal
+          id={props.person.id}
+          onConfirmDeleteClicked={onConfirmDeleteClicked}
+          onDeleteClicked={onDeleteClicked}
+        />
+      )}
       {isEditClicked && (
         <FormModal
           name={name}
@@ -70,7 +85,6 @@ const PersonCard = (props) => {
         </div>
         <div className={classes["card-actions"]}>
           <CardActions
-            id={props.person.id}
             onEditClicked={onEditClicked}
             onDeleteClicked={onDeleteClicked}
           />

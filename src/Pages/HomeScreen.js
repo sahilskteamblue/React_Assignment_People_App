@@ -16,7 +16,6 @@ const HomeScreen = () => {
         {peopleData.length === 0 ? (
           <>
             <div className="spinner">
-              <h2>Loading</h2>
               <div className="bounce1"></div>
               <div className="bounce2"></div>
               <div className="bounce3"></div>
