@@ -8,6 +8,9 @@ const Footer = () => {
     textAlign: "center",
     fontSize: "20px",
     padding: "15px",
+    width: "100%",
+    // position: "fixed",
+    // bottom: "0",
   };
 
   const linkStyle = {

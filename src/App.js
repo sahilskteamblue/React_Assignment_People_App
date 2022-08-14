@@ -5,8 +5,12 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
-      <HomeScreen />;
-      <Footer />
+      <main className="main-content">
+        <HomeScreen />
+      </main>
+      <footer className="footer">
+        <Footer />
+      </footer>
     </>
   );
 };
