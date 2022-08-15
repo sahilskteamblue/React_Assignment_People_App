@@ -16,20 +16,23 @@ const CardActions = (props) => {
   const [isEditClicked, setisEditClicked] = useState(true);
   const [isHeartClicked, setisHeartClicked] = useState(false);
 
+  // FUnction to open form modal on clicked edit button of card
   const onEditClickHandler = () => {
     setisEditClicked(true);
     sendEditClickedValue();
   };
 
+  // Function to send edit clicked to value to card component to open/close form modal
   const sendEditClickedValue = () => {
     props.onEditClicked(isEditClicked);
   };
 
+  // Function to send delete clicked value to card component to open/close delete modal.
   const onDeleteClickHandler = (e) => {
     props.onDeleteClicked(true);
-    // props.onDeleteClicked(e.currentTarget.id);
   };
 
+  // Function to change liked heart status
   const changeHeartHandler = () => {
     setisHeartClicked((prevstate) => !isHeartClicked);
   };

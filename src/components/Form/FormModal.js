@@ -9,11 +9,13 @@ const FormModal = (props) => {
   const [phone, setPhone] = useState(props.phone);
   const [website, setWebsite] = useState(props.website);
 
+  // Function to pass the data to card which is updated on form modal.
   const submitHandler = (e) => {
     e.preventDefault();
     props.onOkClicked([name, email, phone, website]);
   };
 
+  // Function to close the form modal on clicked cancel.
   const onCancelHandler = () => {
     props.onEditClicked(false);
   };
@@ -50,6 +52,7 @@ const FormModal = (props) => {
                       id="name"
                       title="Name"
                       value={name}
+                      required
                       onChange={(e) => setName(e.target.value)}
                     />
                   </div>
@@ -67,6 +70,8 @@ const FormModal = (props) => {
                       id="email"
                       title="Email"
                       value={email}
+                      pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                      required
                       onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
@@ -84,6 +89,7 @@ const FormModal = (props) => {
                       id="phone"
                       title="Phone"
                       value={phone}
+                      required
                       onChange={(e) => setPhone(e.target.value)}
                     />
                   </div>
@@ -101,6 +107,8 @@ const FormModal = (props) => {
                       id="website"
                       title="Website"
                       value={website}
+                      pattern="http(s?)(:\/\/)((www.)?)(([^.]+)\.)?([a-zA-z0-9\-_]+)([a-zA-Z])(\/[^\s]*)?"
+                      required
                       onChange={(e) => setWebsite(e.target.value)}
                     />
                   </div>

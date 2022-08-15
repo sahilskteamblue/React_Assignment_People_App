@@ -6,6 +6,7 @@ import classes from "../components/Card/Card.module.css";
 const HomeScreen = () => {
   const [peopleData, setPeopleData] = useState(people);
 
+  // Function to update people list on delete
   const dropPerson = (id) => {
     setPeopleData(peopleData.filter((item) => item.id !== +id));
   };

@@ -3,11 +3,13 @@ import { CloseOutlined } from "@ant-design/icons";
 import classes from "./FormModal.module.css";
 
 const DeleteModal = (props) => {
+  // Function to delete the card on delete button clicked of the modal
   const onDeleteHandler = (e) => {
     e.preventDefault();
     props.onConfirmDeleteClicked(props.id);
   };
 
+  // Function to close the delete modal on clicked cancel.
   const onCancelHandler = () => {
     props.onDeleteClicked(false);
   };

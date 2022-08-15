@@ -15,20 +15,24 @@ const PersonCard = (props) => {
   const [isEditClicked, setIsEditClicked] = useState(false);
   const [isDeleteClicked, setIsDeleteClicked] = useState(false);
 
+  // Function to open/close form modal on edit clicked from cardActions
   const onEditClicked = (value) => {
     setIsEditClicked(value);
   };
 
+  // Function to open/close delete modal on delete clicked from cardActions
   const onDeleteClicked = (value) => {
     setIsDeleteClicked(value);
     // props.dropPerson(id);
   };
 
+  // Function to pass the id of person to be deleted from people list on HomeScreen
   const onConfirmDeleteClicked = (id) => {
     setIsDeleteClicked(false);
     props.dropPerson(id);
   };
 
+  // Function to update data on card if edited in form modal.
   const onOkClicked = (newData) => {
     const [newname, newemail, newphone, newwebsite] = [...newData];
 
@@ -47,7 +51,6 @@ const PersonCard = (props) => {
     setIsEditClicked(false);
   };
 
-  useEffect(() => {}, [isEditClicked]);
   return (
     <>
       {isDeleteClicked && (
