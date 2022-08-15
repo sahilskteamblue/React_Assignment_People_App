@@ -66,7 +66,7 @@ const FormModal = (props) => {
                   </div>
                   <div className={classes["col-75"]}>
                     <input
-                      type="text"
+                      type="email"
                       id="email"
                       title="Email"
                       value={email}
