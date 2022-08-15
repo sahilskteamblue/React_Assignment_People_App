@@ -1,11 +1,6 @@
 /* Modal Styles */
 
 
-
-.modal-content {
-    padding: 5% 5%
-}
-
 .modal-title {
     margin: 0;
     color: rgba(0, 0, 0, .85);
@@ -90,12 +85,12 @@ label {
 /* Responsive layout - when the screen is less than 760px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 760px) {
 
-    .modal-form,
-    .modal-backdrop {
+
+
+    .modal-form {
         width: 80vw;
-        top: 10vh;
-        left: 0;
-        margin: 0 10px;
+        left: 5%;
+        top: 10%
     }
 
     .col-25,
@@ -117,6 +112,10 @@ label {
     .btn {
         width: 100%;
         margin-top: 2%;
+    }
+
+    hr {
+        margin-top: 0;
     }
 }
 
