@@ -2,32 +2,14 @@ import React from "react";
 import { GithubOutlined } from "@ant-design/icons";
 
 const Footer = () => {
-  const footerStyle = {
-    color: "#ffffff",
-    background: "#000000",
-    textAlign: "center",
-    fontSize: "20px",
-    padding: "15px",
-    width: "100%",
-    // position: "fixed",
-    // bottom: "0",
-  };
-
-  const linkStyle = {
-    textDecoration: "none",
-    color: "#fff",
-    textShadow: "0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1",
-  };
-
   return (
     <>
-      <div className="footer" style={footerStyle}>
-        Made with 💖 by{" "}
+      <div className="footer">
+        <span className="footer-text">Made with 💖 by </span>
         <a
           href="https://github.com/sahilskteamblue/React_Assignment_People_App"
           target="_blank"
           rel="noopener noreferrer"
-          style={linkStyle}
         >
           Sahil Kavitake <GithubOutlined />
         </a>

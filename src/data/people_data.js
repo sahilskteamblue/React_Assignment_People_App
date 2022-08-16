@@ -5,6 +5,8 @@ export const people = [
     email: "Sincere@april.biz",
     phone: "1-770-736-8031 x56442",
     website: "http://hildegard.org",
+    company: "Romaguera-Crona",
+    address: "Kulas Light, Apt. 556, Gwenborough, 92998-3874",
     image: "./Avatars/Bret.svg",
   },
 
@@ -14,6 +16,8 @@ export const people = [
     email: "Shanna@melissa.tv",
     phone: "010-692-6593 x09125",
     website: "http://anastasia.net",
+    company: "Deckow-Crist",
+    address: "Victor Plains, Suite 879, Wisokyburgh, 90566-7771",
     image: "./Avatars/Antonette.svg",
   },
 
@@ -23,6 +27,8 @@ export const people = [
     email: "Nathan@yesenia.net",
     phone: "1-463-123-4447",
     website: "http://ramiro.info",
+    company: "Romaguera-Jacobson",
+    address: "Douglas Extension, Suite 847, McKenziehaven, 59590-4157",
     image: "./Avatars/Samantha.svg",
   },
 
@@ -32,6 +38,8 @@ export const people = [
     email: "Julianne.OConner@kory.org",
     phone: "493-170-9623 x156",
     website: "http://kale.biz",
+    company: "Robel-Corkery",
+    address: "Hoeger Mall, Apt. 692, South Elvis, 53919-4257",
     image: "./Avatars/Karianne.svg",
   },
 
@@ -41,6 +49,8 @@ export const people = [
     email: "Lucio_Hettinger@annie.ca",
     phone: "(254)954-1289",
     website: "http://demarco.info",
+    company: "Keebler LLC",
+    address: "Skiles Walks, Suite 351, Roscoeview, 33263",
     image: "./Avatars/Kamren.svg",
   },
 
@@ -50,6 +60,8 @@ export const people = [
     email: "Karley_Dach@jasper.info",
     phone: "1-477-935-8478 x6430",
     website: "http://ola.org",
+    company: "Considine-Lockman",
+    address: "Norberto Crossing, Apt. 950, South Christy, 23505-1337",
     image: "./Avatars/Leopoldo_Corkery.svg",
   },
 
@@ -59,6 +71,8 @@ export const people = [
     email: "Telly.Hoeger@billy.biz",
     phone: "210.067.6132",
     website: "http://elvis.io",
+    company: "Johns Group",
+    address: "Rex Trail, Suite 280, Howemouth, 58804-1099",
     image: "./Avatars/Elwyn.Skiles.svg",
   },
 
@@ -68,6 +82,8 @@ export const people = [
     email: "Sherwood@rosamond.me",
     phone: "586.493.6943 x140",
     website: "http://jacynthe.com",
+    company: "Abernathy Group",
+    address: "Ellsworth Summit, Suite 729, Aliyaview, 45169",
     image: "./Avatars/Maxime_Nienow.svg",
   },
 
@@ -77,6 +93,8 @@ export const people = [
     email: "Chaim_McDermott@dana.io",
     phone: "(775)976-6794 x41206",
     website: "http://conrad.com",
+    company: "Yost and Sons",
+    address: "Dayna Park, Suite 449, Bartholomebury, 76495-3109",
     image: "./Avatars/Delphine.svg",
   },
 
@@ -86,6 +104,8 @@ export const people = [
     email: "Rey.Padberg@karina.biz",
     phone: "024-648-3804",
     website: "http://ambrose.net",
+    company: "Hoeger LLC",
+    address: "Kattie Turnpike, Suite 198, Lebsackbury, 31428-2261",
     image: "./Avatars/Moriah.stanton.svg",
   },
 ];

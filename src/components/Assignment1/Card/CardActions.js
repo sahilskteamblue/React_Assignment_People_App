@@ -39,8 +39,8 @@ const CardActions = (props) => {
 
   return (
     <>
-      <ul>
-        <li>
+      <ul className={classes["card-actions-ul"]}>
+        <li className={classes["card-actions-li"]}>
           <button
             className={classes["invisible-btn"]}
             onClick={changeHeartHandler}
@@ -52,7 +52,7 @@ const CardActions = (props) => {
             )}
           </button>
         </li>
-        <li>
+        <li className={classes["card-actions-li"]}>
           <button
             className={`${classes["invisible-btn"]} anticon-hover-blue`}
             onClick={onEditClickHandler}

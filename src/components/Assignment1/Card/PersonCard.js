@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CardIconText from "./CardIconText";
 import { MailOutlined, PhoneOutlined, GlobalOutlined } from "@ant-design/icons";
+import CardIconText from "./CardIconText";
 import CardActions from "./CardActions";
 import FormModal from "../Form/FormModal";
 import DeleteModal from "../Form/DeleteModal";
@@ -81,7 +81,6 @@ const PersonCard = (props) => {
         </div>
         <div className={classes["card-body"]}>
           <h3>{name}</h3>
-
           <CardIconText icon={<MailOutlined />} text={email} />
           <CardIconText icon={<PhoneOutlined />} text={phone} />
           <CardIconText icon={<GlobalOutlined />} text={website} />

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import PersonCard from "../components/Card/PersonCard";
+import PersonCard from "../components/Assignment1/Card/PersonCard";
 import { people } from "../data/people_data";
-import classes from "../components/Card/Card.module.css";
+import classes from "../components/Assignment1/Card/Card.module.css";
 
-const HomeScreen = () => {
+const Assignment1 = () => {
   const [peopleData, setPeopleData] = useState(people);
 
   // Function to update people list on delete
@@ -34,4 +34,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default Assignment1;

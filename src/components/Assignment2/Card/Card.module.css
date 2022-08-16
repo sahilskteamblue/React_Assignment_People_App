@@ -1,0 +1,71 @@
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 100%;
+    padding: 0 10px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Style the counter cards */
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    border: 1px solid #e8e8e8;
+    margin: 15px 5%;
+}
+
+.card-body {
+    padding: 5% 7%;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 1;
+    padding: 20px;
+}
+
+.card-header {
+    margin: 0 auto;
+    width: max-content;
+    display: flex;
+}
+
+.col-20 {
+    float: left;
+    margin: 1% auto;
+    width: fit-content;
+}
+
+.col-80 {
+    float: left;
+    width: fit-content;
+    margin: 6px 5%;
+    word-wrap: break-word;
+    /* display: flex;
+    flex-direction: row;
+    width: fit-content; */
+}
+
+.col-80 h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.col-80 p {
+    margin: 10px 0;
+}
