@@ -1,4 +1,4 @@
-# React Assignment 1
+# React Assignment 1 and 2
 
 ## Create a react application which displays grid of people.
 
@@ -17,6 +17,10 @@ Reference Link: https://react-advanced-assignment.psamd.vercel.app/
 - Use functional components to create this react application.
 
 <hr/>
+
+In the same app, create a view displaying list of people. You can use same cards you have created (I mean style of cards i.e. font, background etc), but change Card layout to match this reference link -
+
+Reference link : https://react-basic-assignment.psamd.vercel.app/
 
 # Getting Started with Create React App
 
